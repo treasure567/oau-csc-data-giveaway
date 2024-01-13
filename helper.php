@@ -72,13 +72,13 @@ if (!function_exists('validate_phone')) {
 
 if (!function_exists('csc_group')) {
     function csc_group() : string {
-        return '120363162253874495@g.us';
+        return env('OAU_CSC');
     }
 }
 
 if (! function_exists('get_trenalyze_id')) {
     function get_trenalyze_id() : string {
-        $ids = '1698441406c4ca4238a0b923820dcc509a6f75849b653c28be5c25b'; // get_setting('trenalyzeUniqueIds');
+        $ids = env('TRENALYZE_ACCOUNT_ID'); // get_setting('trenalyzeUniqueIds');
         $uid = 'xxxxxxx';
         if (!empty($ids)) {
             $ids = str_replace(' ', '', $ids);
